@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cameralist>
+    <camera0 ip="192.168.20.168" bin="D00010368"/>
+    <camera0 att1="192.168.20.178" att2="E10010078"/>
+    <camera id="1">
+        <ip>192.168.20.178</ip>
+        <bin>E10010078</bin>
+        <cameraType>8</cameraType>
+        <showName>E178</showName>
+    </camera>
+    <camera id="2">
+        <ip>192.168.20.168</ip>
+        <bin>D00010368</bin>
+        <cameraType>5</cameraType>
+        <showName>D168</showName>
+    </camera>
+</cameralist>

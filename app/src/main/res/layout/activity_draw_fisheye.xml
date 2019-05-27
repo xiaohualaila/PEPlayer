@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_draw"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!--tools:context="com.panoeye.peplayer.peonline.FishEyeDrawActivity">-->
+
+    <LinearLayout
+        android:id="@+id/View"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.opengl.GLSurfaceView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/surfaceView"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_weight="1" />
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="fps1"
+            android:textSize="20dp"
+            android:id="@+id/fps1"
+            android:layout_marginLeft="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:text="cpu"
+            android:textSize="20dp"
+            android:id="@+id/cpu"
+            android:layout_marginLeft="5dp"
+            android:layout_below="@id/fps1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/gyro"
+            android:text="gyro"
+            android:layout_below="@id/cpu"
+            android:layout_marginLeft="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:text="video1"
+            android:textSize="20dp"
+            android:id="@+id/video1"
+            android:layout_marginLeft="215dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:text="video2"
+            android:textSize="20dp"
+            android:id="@+id/video2"
+            android:layout_marginLeft="215dp"
+            android:layout_below="@id/video1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:text="柱状投影"
+                android:textSize="20dp"
+                android:layout_weight="1"
+                android:onClick="stretch"
+                android:id="@+id/proBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <Button
+                android:text="球内"
+                android:textSize="20dp"
+                android:layout_weight="1"
+                android:onClick="posBall"
+                android:id="@+id/posBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <Button
+                android:text="Flip"
+                android:textSize="20dp"
+                android:layout_weight="1"
+                android:onClick="Flip"
+                android:id="@+id/Flip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

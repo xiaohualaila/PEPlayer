@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:background="@color/button_material_dark" >
+
+            <Button
+                android:layout_width="52dp"
+                android:layout_height="36dp"
+                android:text="返回"
+                android:id="@+id/button5"
+                android:layout_gravity="left|center_vertical"
+                android:layout_marginLeft="8dp"
+                android:textSize="14dp"
+                android:onClick="back"
+                android:background="@drawable/button_shape_bar"
+                android:textColor="#ffffff" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="登录"
+                android:id="@+id/textView4"
+                android:layout_gravity="center"
+                android:textColor="#ffffff"
+                android:textSize="22dp" />
+
+            <Button
+                android:layout_width="56dp"
+                android:layout_height="36dp"
+                android:text="登录"
+                android:id="@+id/button6"
+                android:layout_gravity="right|center_vertical"
+                android:textSize="14dp"
+                android:onClick="next"
+                android:background="@drawable/button_shape_bar"
+                android:textColor="#ffffff"
+                android:layout_marginRight="8dp" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="66dp"
+            android:layout_gravity="center_horizontal" >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="用户名"
+                android:id="@+id/textView6"
+                android:textSize="18dp"
+                android:layout_weight="3"
+                android:allowUndo="false"
+                android:textAlignment="center"
+                android:layout_gravity="center"
+                android:layout_marginLeft="8dp" />
+
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/usernameField"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:layout_marginRight="8dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="66dp"
+            android:layout_gravity="center_horizontal" >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="密    码"
+                android:id="@+id/textView5"
+                android:textSize="18dp"
+                android:layout_weight="3"
+                android:allowUndo="false"
+                android:textAlignment="center"
+                android:layout_gravity="center"
+                android:layout_marginLeft="8dp" />
+
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/passwordField"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:layout_marginRight="8dp"
+                android:password="true" />
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

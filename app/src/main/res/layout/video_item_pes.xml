@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <!--可省app:srcCompat="@drawable/ic_launcher_background"-->
+    <ImageView
+        android:id="@+id/video_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_launcher_background"
+        android:layout_marginVertical="10dp"
+        android:layout_marginHorizontal="5dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginVertical="10dp">
+        <!--android:ellipsize="middle" 指定省略号的位置-->
+        <TextView
+            android:id="@+id/video_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="12dp"
+            android:text="这里显示文件名称"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:singleLine="true"/>
+
+    </LinearLayout>
+
+</LinearLayout>

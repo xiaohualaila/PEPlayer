@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.panoeye.peplayer.ConnectPage"
+    tools:layout_editor_absoluteY="25dp"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="@color/button_material_dark"
+        android:clickable="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="在线直连"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#ffffff"
+            android:textSize="22dp" />
+
+        <Button
+            android:id="@+id/back"
+            android:layout_width="52dp"
+            android:layout_height="36dp"
+            android:layout_gravity="left|center_vertical"
+            android:layout_marginLeft="8dp"
+            android:background="@drawable/button_shape_bar"
+            android:onClick="back"
+            android:text="返回"
+            android:textColor="#ffffff"
+            android:textSize="14dp" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/IPAddress"
+            android:layout_width="215dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:hint="这里填相机的IP地址"
+            android:selectAllOnFocus="true"
+            tools:layout_editor_absoluteX="9dp"
+            tools:layout_editor_absoluteY="73dp" />
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="153dp"
+            android:layout_height="46dp"
+            android:entries="@array/cameraTypes"
+            tools:layout_editor_absoluteX="231dp"
+            tools:layout_editor_absoluteY="73dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ctrl"
+        android:layout_width="366dp"
+        android:layout_height="59dp"
+        android:layout_alignParentBottom="true"
+        android:alpha="0.8"
+        android:background="#00320000"
+        android:visibility="visible"
+        tools:layout_editor_absoluteX="9dp"
+        tools:layout_editor_absoluteY="134dp">
+
+        <EditText
+            android:id="@+id/serialNo"
+            android:layout_width="215dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:hint="这里填相机的序列号" />
+    </LinearLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="300dp">
+        <Button
+            android:id="@+id/start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:onClick="GetIP"
+            android:text="Connect"
+            tools:layout_editor_absoluteX="148dp"
+            tools:layout_editor_absoluteY="473dp" />
+    </FrameLayout>
+
+</LinearLayout>

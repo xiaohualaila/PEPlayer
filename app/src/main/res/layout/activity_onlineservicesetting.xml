@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:background="@color/button_material_dark" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="服务器"
+                android:id="@+id/textView3"
+                android:layout_gravity="center"
+                android:textColor="#ffffff"
+                android:textSize="22dp" />
+
+            <Button
+                android:layout_width="52dp"
+                android:layout_height="36dp"
+                android:text="返回"
+                android:id="@+id/button4"
+                android:layout_gravity="left|center_vertical"
+                android:layout_marginLeft="8dp"
+                android:textSize="14dp"
+                android:onClick="back"
+                android:background="@drawable/button_shape_bar"
+                android:textColor="#ffffff" />
+
+            <Button
+                android:layout_width="56dp"
+                android:layout_height="36dp"
+                android:text="下一步"
+                android:id="@+id/nextBtn"
+                android:layout_gravity="right|center_vertical"
+                android:textSize="14dp"
+                android:onClick="next"
+                android:background="@drawable/button_shape_bar"
+                android:textColor="#ffffff"
+                android:layout_marginRight="8dp" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:baselineAligned="false"
+            android:contextClickable="false">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="66dp"
+                android:layout_gravity="center_horizontal" >
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="服务器"
+                    android:id="@+id/textView5"
+                    android:textSize="18dp"
+                    android:layout_weight="3"
+                    android:allowUndo="false"
+                    android:textAlignment="center"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="8dp" />
+
+                <EditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ipField"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="8dp"
+                    android:backgroundTint="#000000" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="66dp"
+                android:layout_gravity="center_horizontal" >
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="端    口"
+                    android:id="@+id/textView6"
+                    android:textSize="18dp"
+                    android:layout_weight="3"
+                    android:allowUndo="false"
+                    android:textAlignment="center"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="8dp" />
+
+                <EditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/portField"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="8dp"
+                    android:backgroundTint="#000000" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

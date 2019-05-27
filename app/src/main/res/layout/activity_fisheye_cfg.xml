@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="panoeye.ffmpeg.MainActivity">
+
+    <TextView
+        android:text="rtsp1:"
+        android:textSize="20dp"
+        android:id="@+id/str_rtsp1"
+        android:layout_marginLeft="5dp"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="28dp"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/RTSPAddress1"
+        android:hint="RTSP地址"
+        android:layout_marginLeft="70dp"
+        android:selectAllOnFocus="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="19dp" />
+
+
+
+    <TextView
+        android:text="rtsp2:"
+        android:id="@+id/str_rtsp2"
+        android:textSize="20dp"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="38dp"
+        android:layout_below="@id/str_rtsp1"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:layout_below="@id/RTSPAddress1"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/RTSPAddress2"
+        android:hint="RTSP地址"
+        android:selectAllOnFocus="true"
+        android:layout_marginLeft="70dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="19dp" />
+
+
+    <TextView
+        android:text="xRatio:"
+        android:textSize="20dp"
+        android:id="@+id/str_xRatio"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="38dp"
+        android:layout_below="@id/str_rtsp2"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:layout_below="@id/RTSPAddress2"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/xRatio"
+        android:digits="0123456789."
+        android:inputType="number"
+        android:hint="xRatio"
+        android:layout_marginLeft="70dp"
+        android:selectAllOnFocus="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="19dp" />
+
+
+    <TextView
+        android:text="yRatio:"
+        android:textSize="20dp"
+        android:id="@+id/str_yRatio"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="38dp"
+        android:layout_below="@id/str_xRatio"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:layout_below="@id/xRatio"
+        android:inputType="number"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:digits="0123456789."
+        android:id="@+id/yRatio"
+        android:hint="yRatio"
+        android:layout_marginLeft="70dp"
+        android:selectAllOnFocus="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="19dp" />
+
+
+    <TextView
+        android:id="@+id/str_xCircle"
+        android:text="xCircle:"
+        android:textSize="20dp"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="38dp"
+        android:layout_below="@id/str_yRatio"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:layout_below="@id/yRatio"
+        android:inputType="number"
+        android:digits="0123456789."
+        android:layout_marginLeft="70dp"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/xCircle"
+        android:hint="xCircle"
+        android:selectAllOnFocus="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="19dp" />
+
+
+    <TextView
+        android:text="yCircle:"
+        android:textSize="20dp"
+        android:id="@+id/str_yCircle"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="38dp"
+        android:layout_below="@id/str_xCircle"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:layout_below="@id/xCircle"
+        android:inputType="number"
+        android:digits="0123456789."
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/yCircle"
+        android:hint="yCircle"
+        android:layout_marginLeft="70dp"
+        android:selectAllOnFocus="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="19dp" />
+
+    <TextView
+        android:id="@+id/str_ip"
+        android:text="IP:"
+        android:textSize="20dp"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="38dp"
+        android:layout_below="@id/str_yCircle"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:layout_below="@id/yCircle"
+        android:inputType="number"
+        android:digits="0123456789."
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/ip"
+        android:hint="IP"
+        android:layout_marginLeft="70dp"
+        android:selectAllOnFocus="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="19dp" />
+
+    <TextView
+        android:id="@+id/str_port"
+        android:text="PORT:"
+        android:textSize="20dp"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="38dp"
+        android:layout_below="@id/str_ip"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:layout_below="@id/ip"
+        android:inputType="number"
+        android:digits="0123456789."
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/port"
+        android:hint="port"
+        android:layout_marginLeft="70dp"
+        android:selectAllOnFocus="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="19dp" />
+    <Button
+        android:text="start"
+        android:onClick="start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/start"
+        android:layout_below="@+id/str_port"
+
+      />
+
+</RelativeLayout>

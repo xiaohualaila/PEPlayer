@@ -1,0 +1,61 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    defaultConfig {
+        applicationId "com.panoeye.peplayer"
+        minSdkVersion 21
+        targetSdkVersion 26
+        versionCode 1
+        versionName "3.6"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        //.so库的默认目录为\app\src\main\jniLibs，若放到eclipse默认目录libs需修改如下
+        sourceSets {
+            main {
+                jni.srcDirs "src/main/cpp"
+                jniLibs.srcDirs 'libs'
+            }
+        }
+        externalNativeBuild {
+            //cmake编译方式配置
+            cmake {
+                // abiFilter：ABI 过滤器（application binary interface，应用二进制接口）
+                //abiFilters 'armeabi'
+                cppFlags "-std=c++11 -fexceptions -frtti"
+                arguments "-DANDROID_STL=c++_static"//,"-DANDROID_TOOLCHAIN=clang"
+            }
+            //mk编译方式配置
+            ndk {
+//                moduleName "JNIServerLib"
+                abiFilters 'armeabi'
+                //abiFilters 'armeabi-v7a,arm64-v8a,x86,x86_64'
+//                stl "c++_static"
+//                cFlags "-std=c++11 -fexceptions -frtti"
+//                ldLibs  "c", "stdc++", "atomic", "log", "android", "EGL", "GLESv1_CM", "GLESv2", "jnigraphics",  "mediandk", "z"
+            }
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    //关联CMake的程序清单文件,path 指向cmake文件路径，此处为项目工程根目录下。
+    externalNativeBuild {
+        cmake {
+            path 'CMakeLists.txt'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.android.support:design:26.1.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+    implementation project(':pelibrary')
+}

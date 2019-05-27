@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="cameraTypes">
+            <item>8路全景</item>
+            <item>5路全景</item>
+            <item>环视双鱼眼</item>
+            <item>鱼眼</item>
+    </string-array>
+</resources>

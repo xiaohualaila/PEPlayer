@@ -1,0 +1,13 @@
+    JNIEXPORT jboolean JNICALL Java_com_panoeye_peplayer_JNIServerLib_registOnlinePano(JNIEnv * env, jobject obj, jstring ip, int port, jstring username, jstring password) {
+        char * _ip;
+        _ip = (char*)env->GetStringUTFChars(ip,0);
+        char * _username;
+        _username = (char*)env->GetStringUTFChars(username,0);
+        char * _password;
+        _password = (char*)env->GetStringUTFChars(password,0);
+        bool result = mc->registPano(_ip, port, _username, _password);
+        env->ReleaseStringUTFChars(ip, _ip);
+        env->ReleaseStringUTFChars(username, _username);
+        env->ReleaseStringUTFChars(password, _password);
+        return result;
+    }

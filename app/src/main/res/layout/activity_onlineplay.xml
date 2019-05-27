@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OnlinePlayActivity">
+
+    <android.opengl.GLSurfaceView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/surfaceView"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_weight="1" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="@color/button_material_dark"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:clickable="false"
+        android:id="@+id/topView"
+        android:alpha="0.8">
+
+        <Button
+            android:layout_width="52dp"
+            android:layout_height="36dp"
+            android:text="返回"
+            android:id="@+id/backBtn"
+            android:layout_gravity="left|center_vertical"
+            android:layout_marginLeft="8dp"
+            android:textSize="14dp"
+            android:onClick="back"
+            android:background="@drawable/button_shape_bar"
+            android:textColor="#ffffff" />
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Title"
+            android:id="@+id/titleTextView"
+            android:layout_gravity="center"
+            android:textColor="#ffffff"
+            android:textSize="22dp"
+            android:textAlignment="center"
+            android:ellipsize = "middle"
+            android:singleLine="true"
+            android:layout_width="260dp" />
+
+    </FrameLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Videos: 0.0 fps"
+        android:id="@+id/videoFrameRateLabel"
+        android:layout_below="@+id/topView"
+        android:layout_alignParentEnd="false"
+        android:layout_alignRight="@+id/topView"
+        android:textColor="#ffffff"
+        android:layout_marginRight="8dp"
+        android:alpha="0.8" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="OpenGL: 0 fps"
+        android:id="@+id/glFrameRateLabel"
+        android:textColor="#ffffff"
+        android:layout_marginRight="8dp"
+        android:layout_below="@+id/videoFrameRateLabel"
+        android:layout_alignParentEnd="true"
+        android:alpha="0.8" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="CPU: 0.00 %"
+        android:id="@+id/cpuLabel"
+        android:layout_below="@+id/netLabel"
+        android:layout_alignParentEnd="false"
+        android:textColor="#ffffff"
+        android:alpha="0.8"
+        android:layout_marginLeft="8dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Network: 0 kBps"
+        android:id="@+id/netLabel"
+        android:layout_below="@+id/timeLabel"
+        android:layout_alignParentEnd="false"
+        android:textColor="#ffffff"
+        android:alpha="0.8"
+        android:layout_marginLeft="8dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="1970-01-01 08:00:00"
+        android:id="@+id/timeLabel"
+
+        android:textColor="#ffffff"
+        android:alpha="0.8"
+        android:layout_marginLeft="8dp"
+        android:layout_below="@+id/topView"
+        android:layout_alignParentStart="true"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:id="@+id/btnView"
+        android:background="#32000000"
+        android:layout_height="48dp"
+        android:alpha="0.8"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="子码流"
+            android:id="@+id/streamTypeBtn"
+            android:textSize="14dp"
+            android:onClick="streamType"
+            android:background="@drawable/button_shape_bar"
+            android:textColor="#ffffff"
+            android:layout_gravity="right|center_vertical"
+            android:layout_weight="1"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="原始图像"
+            android:id="@+id/videoModeBtn"
+            android:textSize="14dp"
+            android:onClick="videoMode"
+            android:background="@drawable/button_shape_bar"
+            android:textColor="#ffffff"
+            android:layout_gravity="right|center_vertical"
+            android:layout_weight="1"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="上下翻转"
+            android:id="@+id/flipBtn"
+            android:textSize="14dp"
+            android:onClick="flip"
+            android:background="@drawable/button_shape_bar"
+            android:textColor="#ffffff"
+            android:layout_gravity="right|center_vertical"
+            android:layout_weight="1"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="VR"
+            android:id="@+id/modeBtn"
+            android:layout_gravity="right|center_vertical"
+            android:textSize="14dp"
+            android:onClick="mode"
+            android:background="@drawable/button_shape_bar"
+            android:textColor="#ffffff"
+            android:layout_marginRight="8dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="8dp" />
+    </LinearLayout>
+
+
+</RelativeLayout>
